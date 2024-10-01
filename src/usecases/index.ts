@@ -1,2 +1,2 @@
-export * from './SendEmail'
+export * from './SendMail'
 export * from './ScheduledAppointmentBuilder'

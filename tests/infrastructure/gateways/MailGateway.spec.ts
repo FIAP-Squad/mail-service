@@ -1,14 +1,14 @@
-import { EmailGateway } from '@/infrastructure'
+import { MailGateway } from '@/infrastructure'
 
-describe('EmailGateway', () => {
+describe('MailGateway', () => {
   let adapterMock: { send: jest.Mock }
-  let emailGateway: EmailGateway
+  let emailGateway: MailGateway
 
   beforeEach(() => {
     adapterMock = {
       send: jest.fn()
     }
-    emailGateway = new EmailGateway()
+    emailGateway = new MailGateway()
     emailGateway.send = adapterMock.send
   })
 

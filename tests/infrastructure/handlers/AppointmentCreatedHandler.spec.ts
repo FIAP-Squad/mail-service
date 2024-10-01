@@ -1,8 +1,8 @@
 import { AppointmentCreatedHandler } from '@/infrastructure'
-import { type ISendEmail } from '@/usecases'
+import { type ISendMail } from '@/usecases'
 
 describe('AppointmentCreatedHandler', () => {
-  let sendMailUseCaseMock: ISendEmail
+  let sendMailUseCaseMock: ISendMail
   let appointmentCreatedHandler: AppointmentCreatedHandler
   let eventMock: any
 

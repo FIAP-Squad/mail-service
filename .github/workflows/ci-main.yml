@@ -32,8 +32,8 @@ jobs:
           file: ./Dockerfile.prd
           push: true
           tags: |
-            ${{ vars.DOCKERHUB_USERNAME }}/email-service:latest
-            ${{ vars.DOCKERHUB_USERNAME }}/email-service:${{ github.sha }}
+            ${{ vars.DOCKERHUB_USERNAME }}/mail-service:latest
+            ${{ vars.DOCKERHUB_USERNAME }}/mail-service:${{ github.sha }}
 
       - name: 🔒 Logout from Docker Hub
         run: docker logout

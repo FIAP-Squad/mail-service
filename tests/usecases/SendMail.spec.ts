@@ -1,9 +1,9 @@
-import { SendEmail, type SendEmailParams } from '@/usecases'
+import { SendMail, type SendMailParams } from '@/usecases'
 
-describe('SendEmail Usecase', () => {
+describe('SendMail Usecase', () => {
   let gatewayMock: { send: jest.Mock }
-  let sendMail: SendEmail
-  const mockParams: SendEmailParams = {
+  let sendMail: SendMail
+  const mockParams: SendMailParams = {
     doctor: {
       name: 'Dr. John',
       email: 'john@example.com'
@@ -20,7 +20,7 @@ describe('SendEmail Usecase', () => {
     gatewayMock = {
       send: jest.fn()
     }
-    sendMail = new SendEmail(gatewayMock)
+    sendMail = new SendMail(gatewayMock)
   })
 
   test('Should call gateway with correct parameters', async () => {
