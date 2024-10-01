@@ -6,4 +6,4 @@ COPY . .
 RUN npm run build
 RUN chmod +x ./start.sh
 CMD ["./start.sh"]
-EXPOSE 5050
+EXPOSE 83
