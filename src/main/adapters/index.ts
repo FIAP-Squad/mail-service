@@ -1,4 +1,2 @@
-export * from './serverAdapter'
-export * from './routeAdapter'
-export * from './HTTPClientAdapter'
 export * from './BrokerAdapter'
+export * from './EmailAdapter'

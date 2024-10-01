@@ -1,2 +1,2 @@
-export * from './IdentityRequestedHandler'
+export * from './AppointmentCreatedHandler'
 export * from './Handler'

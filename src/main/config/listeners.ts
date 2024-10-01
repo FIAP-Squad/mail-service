@@ -1,6 +1,6 @@
 import { type IBrokerAdapter } from '@/main/adapters'
-import { identityRequestedHandler } from '../factories/handlers/identityRequestedHandler'
+import { makeAppointmentCreatedHandler } from '@/main/factories/handlers'
 
 export default async (broker: IBrokerAdapter): Promise<void> => {
-  await broker.subscribe('business-partner-identity-requested', identityRequestedHandler())
+  await broker.subscribe('appointment-created', makeAppointmentCreatedHandler())
 }
