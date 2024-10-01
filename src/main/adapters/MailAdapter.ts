@@ -1,7 +1,7 @@
 import env from '@/main/config/env'
 import nodemailer from 'nodemailer'
 
-export type SendEmailParams = {
+export type SendMailParams = {
   to: string
   subject: string
   text: string
@@ -25,7 +25,7 @@ export class EmailAdapter {
     })
   }
 
-  async send ({ to, subject, text, html }: SendEmailParams): Promise<void> {
+  async send ({ to, subject, text, html }: SendMailParams): Promise<void> {
     const sender = this._setup()
     await sender.sendMail({
       from: this.user,

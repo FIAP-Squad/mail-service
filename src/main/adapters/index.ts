@@ -1,2 +1,2 @@
 export * from './BrokerAdapter'
-export * from './EmailAdapter'
+export * from './MailAdapter'

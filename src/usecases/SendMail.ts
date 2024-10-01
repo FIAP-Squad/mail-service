@@ -1,6 +1,6 @@
 import { ScheduledAppointmentBuilder } from './ScheduledAppointmentBuilder'
 
-export type SendEmailParams = {
+export type SendMailParams = {
   doctor: {
     name: string
     email: string
@@ -13,16 +13,16 @@ export type SendEmailParams = {
   endTime: string
 }
 
-export interface ISendEmail {
-  execute: (params: SendEmailParams) => Promise<void>
+export interface ISendMail {
+  execute: (params: SendMailParams) => Promise<void>
 }
 
-export class SendEmail implements ISendEmail {
+export class SendMail implements ISendMail {
   constructor (
     private readonly _gateway: { send: (to: string, subject: string, text: string, html: string) => Promise<void> }
   ) { }
 
-  async execute (params: SendEmailParams): Promise<void> {
+  async execute (params: SendMailParams): Promise<void> {
     const { doctor, patient, date, startTime, endTime } = params
     const subject = 'Health&Med - Nova consulta agendada'
     const text = ScheduledAppointmentBuilder.buildPlainText({ doctor, patient, date, startTime, endTime })
